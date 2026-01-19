@@ -422,6 +422,8 @@ class SeacoParaformer(BiCifParaformer, Paraformer):
             pre_acoustic_embeds,
             pre_token_length,
             hw_list=self.hotword_list,
+            nfilter=kwargs.get("nfilter", 50),
+            seaco_weight=kwargs.get("seaco_weight", 1.0)
         )
 
         # decoder_out, _ = decoder_outs[0], decoder_outs[1]
